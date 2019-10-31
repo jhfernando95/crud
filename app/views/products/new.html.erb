@@ -1,14 +1,43 @@
+<div class="alert alert-primary" role="alert">
+<div class="jumbotron text-center alert-info" role="alert">
+<h1>Editar Ciudad</h1>
+</div>
+</div>
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+<div class="alert alert-primary" role="alert">
 <%= form_for @product do |f| %>
   <div>
-    <%= f.label :name %>
+    
+     <h6> Ingrese nombre </h6>
     <%= f.text_field :name %>
   </div>
+  <br>
+
   <div>
-    <%= f.label :description %>
+    <h6> Descripcion </h6>
     <%= f.text_area :description %>
   </div>
   <div>
-    <%= f.label :price %>
+    <h6> Precio </h6>
     <%= f.number_field :price %>
   </div>
   <div>

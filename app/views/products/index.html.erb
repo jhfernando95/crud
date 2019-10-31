@@ -1,22 +1,39 @@
-<h1>Listado de Productos</h1>
+<div class="alert alert-dark" role="alert">
+<div class="jumbotron text-center alert-Success" role="alert">
+<h1>Productos</h1>
+</div>
+</div>
+<div class="container text-center">
+          <a href="/products">Auto evaluacion</a>
+          </div>
+<div class="container text-center">
 <%= link_to "Crear Producto", products_new_path %>
-<table>
-  <tr>
-    <thead>
-      <th>Nombre</th>
-      <th>Descripción</th>
-      <th>Precios</th>
-    </thead>
-  </tr>
+</div>
+
+<div class="container">
+<div class="alert alert-dark" role="alert">
+<table border="2"  class="table table-hover table-striped">
+    <tr>
+         <th scope="col"></th>
+         <th scope="col">Nombre</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Precios</th>
+    </tr>
+  
+  
     <% @products.each do |product| %>
-  <tr>
-    <td><%= product.name %></td>
-    <td><%= product.description %></td>
-    <td><%= product.price %></td>
-    <td>
-      <%= link_to "Editar", edit_product_path(product) %>
+    <tr>
+      <td> <%= link_to "Editar", edit_product_path(product) %> 
       <%= link_to "Eliminar", product, method: :delete, data: { confirm: "Deseas eliminar este artículo?"} %>
-    </td>
-  </tr>
-    <% end %>
+      <th><%= product.name %></th>
+    <th><%= product.description %></th>
+    <th><%= product.price %></th>
+     
+    </tr>
+    
+  
+   <% end %>
+  
+    
 </table>
+  

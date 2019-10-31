@@ -1,14 +1,24 @@
+<div class="alert alert-primary" role="alert">
+<div class="jumbotron text-center alert-info" role="alert">
+<h1>Editar Ciudad</h1>
+</div>
+</div>
+<div class="container">
+<div class="alert alert-primary" role="alert">
 <%= form_for @product do |f| %>
   <div>
-    <%= f.label :name %>
+    
+     <h6> Ingrese nombre </h6>
     <%= f.text_field :name %>
   </div>
+  <br>
+
   <div>
-    <%= f.label :description %>
+    <h6> Descripcion </h6>
     <%= f.text_area :description %>
   </div>
   <div>
-    <%= f.label :price %>
+    <h6> Precio </h6>
     <%= f.number_field :price %>
   </div>
   <div>
