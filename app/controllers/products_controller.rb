@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
     
       def new
         @product = Product.new
+        variable_prueba=0
        
 
       end
